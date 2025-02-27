@@ -1,11 +1,11 @@
-# 🏡 House Price Prediction Model
+#  House Price Prediction Model
 
-## 📌 Project Overview
+##  Project Overview
 This project focuses on predicting house sale prices using machine learning techniques. We collected and processed real estate data, performed extensive exploratory data analysis (EDA), engineered meaningful features, and experimented with multiple machine learning models to optimize predictive performance.
 
 ---
 
-## 🎯 Goals
+##  Goals
 - **Data Cleaning & Processing**: Handle missing values, remove outliers, and standardize features.
 - **Feature Engineering**: Create new features to enhance model predictions.
 - **Model Selection**: Train multiple machine learning models and select the best one.
@@ -13,9 +13,9 @@ This project focuses on predicting house sale prices using machine learning tech
 
 ---
 
-## 🔄 Process
+##  Process
 
-### 📂 Data Preprocessing & Feature Engineering
+###  Data Preprocessing & Feature Engineering
 
 1. **Data Collection & Cleaning**
    - Loaded `.json` files and converted them into a structured Pandas DataFrame.
@@ -40,28 +40,28 @@ This project focuses on predicting house sale prices using machine learning tech
 
 ---
 
-### 📊 Exploratory Data Analysis (EDA)
-To better understand the dataset, we conducted **visual analysis**:
+##  Exploratory Data Analysis (EDA)
+We conducted visual analysis to understand key trends and relationships in the dataset.
 
-- **Scatterplot**: Visualizing correlations between numerical features and `sold_price`.  
-  ![Scatterplot Correlation](images/Scatterplot_Corrs.png)
+###  Scatterplot - Correlation Between Features and `sold_price`
+![Scatterplot Correlation](images/Scatterplot_Corrs.png)
 
-- **Boxplot**: Identifying potential outliers and distribution trends.  
-  ![Boxplot Correlation](images/Boxplot_Corrs.png)
+###  Boxplot - Outliers and Distribution Trends
+![Boxplot Correlation](images/Boxplot_Corrs.png)
 
-- **Feature Importance**: Showing the most influential variables in the model.  
-  ![Feature Importance](images/Feature%20Importance.png)
+###  Feature Importance
+![Feature Importance](images/Feature%20Importance.png)
 
 ---
 
-## 🤖 Model Selection & Evaluation
+##  Model Selection & Evaluation
 We experimented with different datasets and transformations, including:
 - **Unprocessed data**
 - **Polynomial features**
 - **PCA-transformed data**
 - **Polynomial + Scaled + PCA data**
 
-### ✅ Best Performing Model: **Gradient Boosting Regressor**
+###  Best Performing Model: **Gradient Boosting Regressor**
 - **Best Hyperparameters:**  
   `{ 'learning_rate': 0.1, 'max_depth': 3, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 300, 'subsample': 0.8 }`
 - **Performance Metrics:**
@@ -71,7 +71,7 @@ We experimented with different datasets and transformations, including:
   - **R² Score:** 0.816
   - **Adjusted R² Score:** 0.8039
 
-### 🔥 Other Models Tested
+###  Other Models Tested
 #### XGBoost:
 - **MSE:** 6,466,147,328.0
 - **RMSE:** 80,412.36
@@ -89,15 +89,15 @@ We experimented with different datasets and transformations, including:
 
 ---
 
-## 🚧 Challenges
+##  Challenges
 - **Handling missing values:** Certain attributes had too many missing values and required imputation.
 - **High-dimensional data:** Reducing unnecessary features was crucial to improving performance.
 - **Outliers:** Needed careful filtering of extreme price values.
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 ---
 
-📌 **Conclusion:** The Gradient Boosting model provided the best predictive accuracy, but there is room for further improvement through advanced hyperparameter tuning and feature selection.
+ **Conclusion:** The Gradient Boosting model provided the best predictive accuracy, but there is room for further improvement through advanced hyperparameter tuning and feature selection.
