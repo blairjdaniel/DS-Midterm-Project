@@ -73,6 +73,10 @@ We experimented with different datasets and transformations, including:
 
 ###  Other Models Tested
 #### XGBoost:
+- **Best Hyperparameters:**  
+  `{ 'n_estimators': 300, 'max_depth': 3, 'learning_rate': 0.1, 'subsample': 0.8, 'colsample_bytree': 1.0, 'gamma': 0, 
+  'reg_alpha': 0.1, 'reg_lambda': 1 }`
+- **Performance Metrics:**
 - **MSE:** 6,466,147,328.0
 - **RMSE:** 80,412.36
 - **MAE:** 57,161.27
