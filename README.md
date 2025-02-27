@@ -1,39 +1,56 @@
 # 🏡 House Price Prediction Model
 
 ## 📌 Project Overview
-This project aims to predict house sale prices using machine learning techniques. We explore real estate data, preprocess it, engineer features, and build predictive models to achieve the best accuracy.
+This project focuses on predicting house sale prices using machine learning techniques. We collected and processed real estate data, performed extensive exploratory data analysis (EDA), engineered meaningful features, and experimented with multiple machine learning models to optimize predictive performance.
+
+---
 
 ## 🎯 Goals
-- Clean and preprocess raw housing data.
-- Engineer features to enhance model performance.
-- Apply machine learning models to predict sold prices.
-- Evaluate and refine model performance.
+- **Data Cleaning & Processing**: Handle missing values, remove outliers, and standardize features.
+- **Feature Engineering**: Create new features to enhance model predictions.
+- **Model Selection**: Train multiple machine learning models and select the best one.
+- **Evaluation**: Compare model performance using key regression metrics.
 
 ---
 
 ## 🔄 Process
 
-### 🛠 Data Preprocessing & Feature Engineering
-1. **Data Loading & Cleaning**
-   - Merged multiple `.json` files into a single DataFrame.
-   - Handled missing values using KNN imputation and mean imputation.
-   - Removed outliers based on the 5th and 95th percentiles of `sold_price`.
-   - Dropped irrelevant or highly correlated features.
+### 📂 Data Preprocessing & Feature Engineering
+
+1. **Data Collection & Cleaning**
+   - Loaded `.json` files and converted them into a structured Pandas DataFrame.
+   - Normalized nested JSON structures to extract useful attributes.
+   - Dropped irrelevant, highly correlated, or redundant features.
+   - Removed outliers using the **5th and 95th percentiles** of `sold_price`.
+   - Imputed missing values using:
+     - **KNN Imputer** for numerical values like `sqft` and `year_built`.
+     - **Mean Imputation** for features like `beds`, `garage`, `stories`, and `baths`.
 
 2. **Feature Engineering**
-   - Created new features such as `price_per_sqft` and `median_value_per_sqft`.
-   - Encoded categorical variables using Label Encoding.
-   - Normalized and standardized features for improved model performance.
-   - Applied Principal Component Analysis (PCA) to reduce dimensionality.
+   - **New Features Created:**
+     - `price_per_sqft`: Sold price divided by square footage.
+     - `median_value_per_sqft`: Adjusted for city-level median home values.
+   - **Encoding:**
+     - Categorical variables were transformed using **Label Encoding**.
+     - Cities were encoded using a **custom Label Encoder** to handle unseen values.
+   - **Feature Selection:**
+     - Dropped weak or redundant features based on correlation and importance.
+   - **Dimensionality Reduction:**
+     - Applied **Principal Component Analysis (PCA)** to retain 95% of variance.
 
-3. **Exploratory Data Analysis (EDA)**
-   - Identified key trends and correlations using visualizations.
-   - Scatterplot of features vs. `sold_price`:
-     ![Sold Price Scatterplot](images/Sold%20Price%20scatterplot%20correlation.png)
-   - Boxplot analysis to detect outliers:
-     ![Sold Price Boxplot](images/Sold%20Price%20BoxPlot%20Correlation.png)
-   - Feature importance visualization:
-     ![Feature Importance](images/Feature%20Importance.png)
+---
+
+### 📊 Exploratory Data Analysis (EDA)
+To better understand the dataset, we conducted **visual analysis**:
+
+- **Scatterplot**: Visualizing correlations between numerical features and `sold_price`.  
+  ![Scatterplot Correlation](images/Scatterplot_Corrs.png)
+
+- **Boxplot**: Identifying potential outliers and distribution trends.  
+  ![Boxplot Correlation](images/Boxplot_Corrs.png)
+
+- **Feature Importance**: Showing the most influential variables in the model.  
+  ![Feature Importance](images/Feature%20Importance.png)
 
 ---
 
@@ -80,9 +97,6 @@ We experimented with different datasets and transformations, including:
 ---
 
 ## 🚀 Future Improvements
-- **Hyperparameter tuning:** Further optimizing Gradient Boosting/XGBoost for better performance.
-- **Feature selection:** Experimenting with more domain-specific features to enhance prediction accuracy.
-- **Ensemble models:** Combining multiple models to improve overall performance.
 
 ---
 
