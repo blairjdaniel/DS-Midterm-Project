@@ -93,14 +93,23 @@ We experimented with different datasets and transformations, including:
 
 ---
 
+## Tuning Pipeline
+
+To optimize the performance of our **Gradient Boosting Regressor**, we implemented a tuning pipeline using custom cross-validation and hyperparameter search.
+
+### **Pipeline Steps**
+1. **Data Standardization:** Applied `StandardScaler()` to normalize numerical features.
+2. **Model Selection:** Used `GradientBoostingRegressor()` as the base model.
+3. **Hyperparameter Tuning:**  
+   - Optimized using a **custom cross-validation strategy** to ensure robust evaluation across different cities.
+   - Grid-searched over key hyperparameters to enhance predictive accuracy.
+
+---
+
 ##  Challenges
 - **Handling missing values:** Certain attributes had too many missing values and required imputation.
 - **High-dimensional data:** Reducing unnecessary features was crucial to improving performance.
 - **Outliers:** Needed careful filtering of extreme price values.
-
----
-
-##  Future Improvements
 
 ---
 
